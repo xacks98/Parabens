@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parabéns!</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #ffddcc;
+      font-family: Arial, sans-serif;
+      color: #333;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #ff6600;
+    }
+    p {
+      font-size: 1.5rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>🎉 Parabéns! 🎉</h1>
+    <p>Desejamos-lhe todo o sucesso e alegria do mundo!</p>
+  </div>
+  <script>
+    // Função para iniciar os confetes
+    function startConfetti() {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+    }
+
+    // Inicia os confetes automaticamente ao carregar a página
+    window.onload = startConfetti;
+
+    // Repete os confetes a cada 2 segundos
+    setInterval(startConfetti, 2000);
+  </script>
+</body>
+</html>
